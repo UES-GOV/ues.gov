@@ -3,21 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UES Emergency Alert</title>
+    <title>United Eastern States - Emergency Alert</title>
     <style>
+        /* Global Styles */
         body {
             font-family: Arial, sans-serif;
+            margin: 1in;
             background-color: #121212;
             color: white;
-            margin: 1in; /* 1-inch margins on all sides */
         }
         header {
-            background-color: #333;
-            padding: 20px;
             text-align: center;
+            padding: 20px;
         }
         h1 {
-            margin: 0;
+            color: #4CAF50;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            margin-top: 40px;
+            background-color: #333;
+        }
+
+        /* Emergency Section Styles */
+        #emergency-section {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+        }
+        #emergency-section h2 {
+            color: #FF0000;
         }
         .button {
             padding: 10px 20px;
@@ -25,61 +42,96 @@
             color: white;
             border: none;
             cursor: pointer;
-            margin-top: 20px;
         }
         .button:hover {
             background-color: #45a049;
         }
-        #password-section {
-            display: none;
-            margin-top: 20px;
+
+        /* News Carousel Styles */
+        #news-reports {
+            margin-bottom: 40px;
         }
-        footer {
+        .carousel {
+            display: flex;
+            justify-content: center;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 20px;
+        }
+        .carousel-box {
+            flex: 0 0 300px;
             background-color: #333;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: calc(100% - 2in); /* Account for 1-inch margins on both sides */
-            bottom: 0;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-        #ues-logo {
-            width: 150px;
-            margin-bottom: 20px;
+        .carousel-box h2 {
+            font-size: 18px;
+            color: #4CAF50;
+        }
+        .carousel-box p {
+            font-size: 14px;
+        }
+        .carousel-box a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        /* Historical Section Styles */
+        #historical-section {
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 8px;
         }
     </style>
 </head>
 <body>
     <header>
-        <img id="ues-logo" src="North_Harbor__1_-removebg-preview.png" alt="UES Logo">
-        <h1>United Eastern States - Emergency Alert</h1>
-        <p>
-            Recent surveillance operations have detected a significant concentration of unidentified military forces operating off the eastern coast of the United Eastern States. Analysts believe these forces may be conducting reconnaissance or staging for a potential operation. While their exact intentions remain unclear, the unexpected presence has heightened security concerns and prompted UES leadership to initiate a comprehensive review of coastal defenses. The military is fully engaged in monitoring the situation, and defensive measures are being reinforced to ensure the security of our nation. Additional intelligence is being gathered to determine the origin and objectives of these forces.
-        </p>
-        <p>
-            <strong>Citizen Advisory:</strong> At this moment, all citizens are urged to remain calm and follow these critical steps to ensure your safety:
-            <ul>
-                <li><strong>Monitor Official Updates:</strong> Stay tuned to verified UES communication channels for real-time updates and instructions. Avoid spreading rumors or unverified information.</li>
-                <li><strong>Avoid Coastal Areas:</strong> Unless absolutely necessary, refrain from traveling to or near the eastern coastline. Military operations may be underway, and access could be restricted.</li>
-                <li><strong>Emergency Supplies:</strong> Ensure that your household is prepared with essential items, including food, water, and medical kits, sufficient for at least 72 hours.</li>
-                <li><strong>Plan Ahead:</strong> Identify the nearest emergency shelter and review your evacuation plan. Share this plan with family members and ensure that communication lines remain open.</li>
-                <li><strong>Report Suspicious Activity:</strong> Be vigilant and report any unusual or suspicious activities to local authorities immediately. Cooperation from citizens is crucial in maintaining national security.</li>
-                <li><strong>Stay Indoors if Advised:</strong> Should the situation escalate, be prepared to follow lockdown or evacuation orders as issued by UES authorities.</li>
-                <li><strong>Support Your Community:</strong> Check on neighbors, particularly the elderly or vulnerable, and assist them in preparing for any potential developments.</li>
-            </ul>
-            Your readiness and cooperation are essential as the UES government works tirelessly to address the situation. Together, we can ensure the safety and resilience of our nation.
-        </p>
-        
-        <p><strong>Alert Posted On: <span id="timestamp"></span></strong></p>
-        <button class="button" onclick="showPasswordPrompt()">Enter Secure Area</button>
+        <h1>United Eastern States</h1>
+        <p>Explore the latest updates and learn about our nation's roots.</p>
     </header>
 
-    <div id="password-section">
-        <h2>Emergency Intelligence Report:</h2>
-        <p>Recent surveillance has indicated an unusual presence of NATO forces off the eastern coast of the United Eastern States. Despite their typical presence being far across the Atlantic, there are growing suspicions that these forces may be positioning for potential military action against UES interests. With tensions rising in Europe and the global balance teetering, it is unclear whether NATO forces are merely observing or preparing for hostile engagement. Further reconnaissance and strategic defense measures are currently under consideration by UES command as part of our broader military readiness plans.</p>
-    </div>
+    <section id="emergency-section">
+        <h2>Emergency Alert</h2>
+        <p>
+            Recent surveillance operations have detected an unusual concentration of unidentified military forces off the eastern coast of the UES. 
+            Initial analysis suggests these forces may be conducting reconnaissance or staging for potential action. 
+            All citizens are advised to stay vigilant, avoid coastal areas, and monitor official UES channels for updates. 
+            Emergency supplies and readiness are strongly recommended. The UES military is actively monitoring the situation.
+        </p>
+        <button class="button" onclick="showPasswordPrompt()">Enter Secure Area</button>
+    </section>
+
+    <section id="news-reports">
+        <h2>News and Reports</h2>
+        <div class="carousel">
+            <div class="carousel-box">
+                <h2>Northern Illinois Offensive</h2>
+                <p>UES forces achieved a significant victory in August 2021, pushing back Union Forces and securing strategic supply routes.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="carousel-box">
+                <h2>Citizen Engagement</h2>
+                <p>In September 2023, the UES encouraged citizens to actively participate in governance and decision-making initiatives.</p>
+                <a href="#">Learn How</a>
+            </div>
+            <div class="carousel-box">
+                <h2>Address on National Unity</h2>
+                <p>On October 1, 2023, the Supreme Heads of Command emphasized the importance of unity amid ongoing challenges.</p>
+                <a href="#">Read Statement</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="historical-section">
+        <h2>The Roots of the UES</h2>
+        <p>
+            The United Eastern States (UES) emerged during a period of profound upheaval, officially founded in 1997. By 2007, the UES formally ceded from the United States, igniting the Civil War. Over the years, the UES has established unique governance systems, defined by its dual leadership model and unyielding pursuit of self-determination. Despite ongoing conflict, the UES continues to grow, with its history shrouded in both intrigue and resilience.
+        </p>
+    </section>
 
     <footer>
-        <p>&copy; 2024 United Eastern States - All Rights Reserved</p>
+        <p>&copy; 1997 - 2024 United Eastern States. All rights reserved.</p>
     </footer>
 
     <script>
@@ -87,18 +139,11 @@
         function showPasswordPrompt() {
             var password = prompt("Enter password:");
             if (password === "2007") {
-                document.getElementById("password-section").style.display = "block";
+                alert("Access Granted. Secure Area Available.");
             } else {
                 alert("Incorrect password. Access denied.");
             }
         }
-
-        // Set a manually specified earlier timestamp to fit UES lore
-        window.onload = function() {
-            var alertDate = new Date('2024-08-15T10:30:00'); // Adjust this to the specific date/time you'd like
-            var dateString = alertDate.toLocaleString(); // Formats date and time
-            document.getElementById("timestamp").innerText = dateString; // Insert timestamp into the HTML
-        };
     </script>
 </body>
 </html>
