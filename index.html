@@ -35,23 +35,6 @@
             display: none;
             margin-top: 20px;
         }
-        #view-counter {
-            text-align: center;
-            margin: 20px 0;
-            font-size: 1.2em;
-        }
-        #dial {
-            width: 100px;
-            height: 100px;
-            border: 10px solid #4CAF50;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto;
-            font-size: 1.5em;
-            font-weight: bold;
-        }
         footer {
             background-color: #333;
             text-align: center;
@@ -68,20 +51,31 @@
 </head>
 <body>
     <header>
-        <img id="ues-logo" src="images/ues-logo.png" alt="UES Logo">
+        <img id="ues-logo" src="North_Harbor__1_-removebg-preview.png" alt="UES Logo">
         <h1>United Eastern States - Emergency Alert</h1>
-        <p>Recent surveillance has indicated an unusual presence of military forces off the eastern coast of the United Eastern States. Further details are classified.</p>
+        <p>
+            Recent surveillance operations have detected an unusual concentration of unidentified military forces operating off the eastern coast of the United Eastern States. 
+            Initial analysis suggests these forces may be conducting reconnaissance or staging for potential action, though their exact intentions remain unclear. The unexpected presence has raised concerns within UES leadership, prompting increased vigilance and a review of coastal defenses. 
+            Efforts are underway to gather more intelligence on the origin and objectives of these forces. At this time, further details remain classified as strategic assessments continue.
+        </p>
+        <p>
+            <strong>Citizen Advisory:</strong><br>
+            To ensure the safety and security of all citizens, the UES government advises the following steps:
+            <ul>
+                <li><strong>Remain Alert:</strong> Monitor official UES channels for updates and instructions.</li>
+                <li><strong>Avoid Coastal Areas:</strong> Refrain from unnecessary travel to the eastern coastline until further notice.</li>
+                <li><strong>Emergency Preparations:</strong> Ensure you have access to essential supplies, including food, water, and medical kits, in case of an emergency.</li>
+                <li><strong>Stay Calm:</strong> There is no immediate threat to inland areas. The UES military is actively monitoring and responding to the situation.</li>
+                <li><strong>Report Suspicious Activity:</strong> If you witness any unusual or concerning activities, contact local authorities immediately.</li>
+            </ul>
+            Your cooperation and readiness are crucial as the UES takes every measure to safeguard its citizens and territory.
+        </p>
         <button class="button" onclick="showPasswordPrompt()">Enter Secure Area</button>
     </header>
 
     <div id="password-section">
         <h2>Emergency Intelligence Report:</h2>
         <p>Recent surveillance has indicated an unusual presence of NATO forces off the eastern coast of the United Eastern States. Despite their typical presence being far across the Atlantic, there are growing suspicions that these forces may be positioning for potential military action against UES interests. With tensions rising in Europe and the global balance teetering, it is unclear whether NATO forces are merely observing or preparing for hostile engagement. Further reconnaissance and strategic defense measures are currently under consideration by UES command as part of our broader military readiness plans.</p>
-    </div>
-
-    <div id="view-counter">
-        Page Views:
-        <div id="dial">0</div>
     </div>
 
     <footer>
@@ -98,16 +92,6 @@
                 alert("Incorrect password. Access denied.");
             }
         }
-
-        // Page view counter
-        let views = localStorage.getItem("pageViews") || 0;
-
-        // Increment the counter on page load
-        views++;
-        localStorage.setItem("pageViews", views);
-
-        // Update the dial with the current count
-        document.getElementById("dial").textContent = views;
     </script>
 </body>
 </html>
