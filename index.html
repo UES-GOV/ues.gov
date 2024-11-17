@@ -9,8 +9,7 @@
             font-family: Arial, sans-serif;
             background-color: #121212;
             color: white;
-            margin: 20px; /* Added margin to keep content away from borders */
-            padding: 0;
+            margin: 1in; /* 1-inch margins on all sides */
         }
         header {
             background-color: #333;
@@ -40,11 +39,11 @@
             text-align: center;
             padding: 10px;
             position: fixed;
-            width: 100%;
+            width: calc(100% - 2in); /* Account for 1-inch margins on both sides */
             bottom: 0;
         }
         #ues-logo {
-            width: 150px; /* Adjust the size as needed */
+            width: 150px;
             margin-bottom: 20px;
         }
     </style>
@@ -53,10 +52,24 @@
     <header>
         <img id="ues-logo" src="North_Harbor__1_-removebg-preview.png" alt="UES Logo">
         <h1>United Eastern States - Emergency Alert</h1>
-        <p>Recent surveillance has indicated an unusual presence of military forces off the eastern coast of the United Eastern States. Further details are classified.</p>
+        <p>
+            Recent surveillance operations have detected a significant concentration of unidentified military forces operating off the eastern coast of the United Eastern States. Analysts believe these forces may be conducting reconnaissance or staging for a potential operation. While their exact intentions remain unclear, the unexpected presence has heightened security concerns and prompted UES leadership to initiate a comprehensive review of coastal defenses. The military is fully engaged in monitoring the situation, and defensive measures are being reinforced to ensure the security of our nation. Additional intelligence is being gathered to determine the origin and objectives of these forces.
+        </p>
+        <p>
+            <strong>Citizen Advisory:</strong> At this moment, all citizens are urged to remain calm and follow these critical steps to ensure your safety:
+            <ul>
+                <li><strong>Monitor Official Updates:</strong> Stay tuned to verified UES communication channels for real-time updates and instructions. Avoid spreading rumors or unverified information.</li>
+                <li><strong>Avoid Coastal Areas:</strong> Unless absolutely necessary, refrain from traveling to or near the eastern coastline. Military operations may be underway, and access could be restricted.</li>
+                <li><strong>Emergency Supplies:</strong> Ensure that your household is prepared with essential items, including food, water, and medical kits, sufficient for at least 72 hours.</li>
+                <li><strong>Plan Ahead:</strong> Identify the nearest emergency shelter and review your evacuation plan. Share this plan with family members and ensure that communication lines remain open.</li>
+                <li><strong>Report Suspicious Activity:</strong> Be vigilant and report any unusual or suspicious activities to local authorities immediately. Cooperation from citizens is crucial in maintaining national security.</li>
+                <li><strong>Stay Indoors if Advised:</strong> Should the situation escalate, be prepared to follow lockdown or evacuation orders as issued by UES authorities.</li>
+                <li><strong>Support Your Community:</strong> Check on neighbors, particularly the elderly or vulnerable, and assist them in preparing for any potential developments.</li>
+            </ul>
+            Your readiness and cooperation are essential as the UES government works tirelessly to address the situation. Together, we can ensure the safety and resilience of our nation.
+        </p>
         
-        <p><strong>Alert Posted On: <span id="timestamp"></span></strong></p> <!-- Timestamp here -->
-
+        <p><strong>Alert Posted On: <span id="timestamp"></span></strong></p>
         <button class="button" onclick="showPasswordPrompt()">Enter Secure Area</button>
     </header>
 
@@ -82,7 +95,7 @@
 
         // Set a manually specified earlier timestamp to fit UES lore
         window.onload = function() {
-            var alertDate = new Date('2024-08-21T15:00:00'); // Adjust this to the specific date/time you'd like
+            var alertDate = new Date('2024-08-15T10:30:00'); // Adjust this to the specific date/time you'd like
             var dateString = alertDate.toLocaleString(); // Formats date and time
             document.getElementById("timestamp").innerText = dateString; // Insert timestamp into the HTML
         };
