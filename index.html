@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UES Emergency Alert</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        #password-section {
+            display: none;
+            margin-top: 20px;
+        }
+        #view-counter {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.2em;
+        }
+        #dial {
+            width: 100px;
+            height: 100px;
+            border: 10px solid #4CAF50;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        footer {
+            background-color: #333;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        #ues-logo {
+            width: 150px; /* Adjust the size as needed */
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img id="ues-logo" src="images/ues-logo.png" alt="UES Logo">
+        <h1>United Eastern States - Emergency Alert</h1>
+        <p>Recent surveillance has indicated an unusual presence of military forces off the eastern coast of the United Eastern States. Further details are classified.</p>
+        <button class="button" onclick="showPasswordPrompt()">Enter Secure Area</button>
+    </header>
+
+    <div id="password-section">
+        <h2>Emergency Intelligence Report:</h2>
+        <p>Recent surveillance has indicated an unusual presence of NATO forces off the eastern coast of the United Eastern States. Despite their typical presence being far across the Atlantic, there are growing suspicions that these forces may be positioning for potential military action against UES interests. With tensions rising in Europe and the global balance teetering, it is unclear whether NATO forces are merely observing or preparing for hostile engagement. Further reconnaissance and strategic defense measures are currently under consideration by UES command as part of our broader military readiness plans.</p>
+    </div>
+
+    <div id="view-counter">
+        Page Views:
+        <div id="dial">0</div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 United Eastern States - All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // Password functionality
+        function showPasswordPrompt() {
+            var password = prompt("Enter password:");
+            if (password === "2007") {
+                document.getElementById("password-section").style.display = "block";
+            } else {
+                alert("Incorrect password. Access denied.");
+            }
+        }
+
+        // Page view counter
+        let views = localStorage.getItem("pageViews") || 0;
+
+        // Increment the counter on page load
+        views++;
+        localStorage.setItem("pageViews", views);
+
+        // Update the dial with the current count
+        document.getElementById("dial").textContent = views;
+    </script>
+</body>
+</html>
+
