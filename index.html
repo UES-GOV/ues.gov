@@ -47,6 +47,15 @@
             background-color: #45a049;
         }
 
+        /* Secure Content Styles */
+        #secure-content {
+            display: none;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
         /* News Carousel Styles */
         #news-reports {
             margin-bottom: 40px;
@@ -83,18 +92,10 @@
             padding: 20px;
             border-radius: 8px;
         }
-
-        /* Logo Styles */
-        #logo {
-            display: block;
-            margin: 0 auto 20px auto;
-            max-width: 200px;
-        }
     </style>
 </head>
 <body>
     <header>
-        <img id="logo" src="UES-TREATY-ORG.png" alt="UES Treaty Organization Logo">
         <h1>United Eastern States</h1>
         <p>Explore the latest updates and learn about our nation's roots.</p>
     </header>
@@ -108,6 +109,11 @@
             Emergency supplies and readiness are strongly recommended. The UES military is actively monitoring the situation.
         </p>
         <button class="button" onclick="showPasswordPrompt()">Enter Secure Area</button>
+    </section>
+
+    <section id="secure-content">
+        <h2>Secure Area Content</h2>
+        <p>The UES military believes the concentration of forces is likely the North Atlantic Treaty Organization (NATO), based on convoy sightings aiding America. The UES military is actively preparing for potential engagement, monitoring the situation closely. All citizens are advised to remain calm and follow any further instructions from UES authorities.</p>
     </section>
 
     <section id="news-reports">
@@ -147,11 +153,15 @@
         function showPasswordPrompt() {
             var password = prompt("Enter password:");
             if (password === "2007") {
+                document.getElementById('secure-content').style.display = 'block';
                 alert("Access Granted. Secure Area Available.");
             } else {
                 alert("Incorrect password. Access denied.");
             }
         }
     </script>
+</body>
+</html>
+
 </body>
 </html>
