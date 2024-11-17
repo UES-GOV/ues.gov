@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             background-color: #121212;
             color: white;
-            margin: 0;
+            margin: 20px; /* Added margin to keep content away from borders */
             padding: 0;
         }
         header {
@@ -53,23 +53,10 @@
     <header>
         <img id="ues-logo" src="North_Harbor__1_-removebg-preview.png" alt="UES Logo">
         <h1>United Eastern States - Emergency Alert</h1>
-        <p>
-            Recent surveillance operations have detected an unusual concentration of unidentified military forces operating off the eastern coast of the United Eastern States. 
-            Initial analysis suggests these forces may be conducting reconnaissance or staging for potential action, though their exact intentions remain unclear. The unexpected presence has raised concerns within UES leadership, prompting increased vigilance and a review of coastal defenses. 
-            Efforts are underway to gather more intelligence on the origin and objectives of these forces. At this time, further details remain classified as strategic assessments continue.
-        </p>
-        <p>
-            <strong>Citizen Advisory:</strong><br>
-            To ensure the safety and security of all citizens, the UES government advises the following steps:
-            <ul>
-                <li><strong>Remain Alert:</strong> Monitor official UES channels for updates and instructions.</li>
-                <li><strong>Avoid Coastal Areas:</strong> Refrain from unnecessary travel to the eastern coastline until further notice.</li>
-                <li><strong>Emergency Preparations:</strong> Ensure you have access to essential supplies, including food, water, and medical kits, in case of an emergency.</li>
-                <li><strong>Stay Calm:</strong> There is no immediate threat to inland areas. The UES military is actively monitoring and responding to the situation.</li>
-                <li><strong>Report Suspicious Activity:</strong> If you witness any unusual or concerning activities, contact local authorities immediately.</li>
-            </ul>
-            Your cooperation and readiness are crucial as the UES takes every measure to safeguard its citizens and territory.
-        </p>
+        <p>Recent surveillance has indicated an unusual presence of military forces off the eastern coast of the United Eastern States. Further details are classified.</p>
+        
+        <p><strong>Alert Posted On: <span id="timestamp"></span></strong></p> <!-- Timestamp here -->
+
         <button class="button" onclick="showPasswordPrompt()">Enter Secure Area</button>
     </header>
 
@@ -92,7 +79,13 @@
                 alert("Incorrect password. Access denied.");
             }
         }
+
+        // Set a manually specified earlier timestamp to fit UES lore
+        window.onload = function() {
+            var alertDate = new Date('2024-08-21T15:00:00'); // Adjust this to the specific date/time you'd like
+            var dateString = alertDate.toLocaleString(); // Formats date and time
+            document.getElementById("timestamp").innerText = dateString; // Insert timestamp into the HTML
+        };
     </script>
 </body>
 </html>
-
